@@ -10,8 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_chat_sent"
         android:orientation="vertical"
-        android:padding="10dp"
-        android:maxWidth="75%">
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tvMessage"

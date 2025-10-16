@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign up with Email"
+            android:text="Log in to Chatbox"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get chatting with friends and family today by signing up for our chat app!"
+            android:text="Welcome back! Sign in using your social account or email to continue us"
             android:textAlignment="center"
             android:gravity="center"
             android:textColor="@color/gray"
@@ -45,17 +45,72 @@
             android:lineSpacingExtra="2dp"
             android:paddingHorizontal="12dp" />
 
-        <!-- Your Name Field -->
-        <EditText
-            android:id="@+id/etName"
+        <!-- Social Login Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/btnFacebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/social_circle_bg"
+                android:padding="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Facebook Login" />
+
+            <ImageView
+                android:id="@+id/btnGoogle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/social_circle_bg"
+                android:padding="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Google Login" />
+
+            <ImageView
+                android:id="@+id/btnApple"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/social_circle_bg"
+                android:padding="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Apple Login" />
+        </LinearLayout>
+
+        <!-- OR Divider -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your name"
-            android:inputType="text"
-            android:textColor="@color/black"
-            android:textColorHint="@color/gray"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/light_gray" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textColor="@color/gray"
+                android:layout_marginHorizontal="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+        </LinearLayout>
 
         <!-- Email Field -->
         <EditText
@@ -78,30 +133,43 @@
             android:inputType="textPassword"
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/light_gray" />
+            android:backgroundTint="@color/light_gray"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Confirm Password Field -->
-        <EditText
-            android:id="@+id/etConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:textColorHint="@color/gray"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="@color/light_gray" />
-
-        <!-- Create Account Button -->
+        <!-- Login Button -->
         <Button
-            android:id="@+id/btnCreateAccount"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Create an account"
+            android:text="Log in"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:background="@color/teal_700"
-            android:layout_marginBottom="16dp" />
+            android:backgroundTint="@color/extra_light_gray"
+            android:enabled="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_disabled_bg" />
+
+        <!-- Forgot Password -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="@color/gray" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log in to Chatbox"
+            android:text="Sign up with Email"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome back! Sign in using your social account or email to continue us"
+            android:text="Upload your profile image and sign up to start chatting!"
             android:textAlignment="center"
             android:gravity="center"
             android:textColor="@color/gray"
@@ -45,72 +45,41 @@
             android:lineSpacingExtra="2dp"
             android:paddingHorizontal="12dp" />
 
-        <!-- Social Login Buttons -->
-        <LinearLayout
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_person"
+            android:contentDescription="Profile Image"
+            android:background="@drawable/circle_image_bg"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+        <!-- Upload Image Button -->
+        <Button
+            android:id="@+id/btnUploadImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp">
+            android:text="Upload Profile Picture"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/teal_700"
+            android:layout_marginBottom="24dp" />
 
-            <ImageView
-                android:id="@+id/btnFacebook"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/social_circle_bg"
-                android:padding="10dp"
-                android:src="@drawable/ic_launcher_background"
-                android:contentDescription="Facebook Login" />
-
-            <ImageView
-                android:id="@+id/btnGoogle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/social_circle_bg"
-                android:padding="10dp"
-                android:src="@drawable/ic_launcher_background"
-                android:contentDescription="Google Login" />
-
-            <ImageView
-                android:id="@+id/btnApple"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/social_circle_bg"
-                android:padding="10dp"
-                android:src="@drawable/ic_launcher_background"
-                android:contentDescription="Apple Login" />
-        </LinearLayout>
-
-        <!-- OR Divider -->
-        <LinearLayout
+        <!-- Your Name Field -->
+        <EditText
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="16dp">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="1dp"
-                android:background="@color/light_gray" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="OR"
-                android:textColor="@color/gray"
-                android:layout_marginHorizontal="8dp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="1dp"
-                android:background="@color/light_gray" />
-        </LinearLayout>
+            android:hint="Your name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/light_gray" />
 
         <!-- Email Field -->
         <EditText
@@ -133,30 +102,30 @@
             android:inputType="textPassword"
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
-            android:backgroundTint="@color/light_gray"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/light_gray" />
 
-        <!-- Login Button -->
+        <!-- Confirm Password Field -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/light_gray" />
+
+        <!-- Create Account Button -->
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Log in"
+            android:text="Create an account"
             android:textStyle="bold"
-            android:textColor="@color/gray"
-            android:backgroundTint="@color/extra_light_gray"
-            android:enabled="false"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/btn_disabled_bg" />
-
-        <!-- Forgot Password -->
-        <TextView
-            android:id="@+id/tvForgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot password?"
-            android:textColor="@color/teal_700"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:textColor="@color/white"
+            android:background="@color/teal_700"
+            android:layout_marginBottom="16dp" />
     </LinearLayout>
 </ScrollView>
